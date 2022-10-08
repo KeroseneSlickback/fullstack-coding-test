@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import DynamicText from "../components/DynamicText";
+import { Input, Stack } from "@chakra-ui/react";
 
 const Home = () => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -8,17 +9,16 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <Stack align="center" justify="center" height="100vh">
       <Head>
         <title>Coding Test</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
+      <Stack as="main">
         <DynamicText />
-        <input onChange={onChange} />
-      </main>
-    </div>
+        <Input placeholder="Enter Text..." onChange={onChange} size="sm" />
+      </Stack>
+    </Stack>
   );
 };
 
