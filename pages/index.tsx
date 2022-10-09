@@ -17,7 +17,7 @@ const Home = () => {
         <title>Coding Test</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Stack as="main">
+      <Stack as="main" maxW="12rem">
         <DynamicText ref={textRef} />
         <Input placeholder="Enter Text..." onChange={onChange} size="sm" />
       </Stack>
