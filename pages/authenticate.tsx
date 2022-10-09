@@ -3,11 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
-const authorize = () => {
+const authenticate = () => {
   return (
     <Stack align="center" justify="center" height="100vh">
       <Head>
-        <title>Login</title>
+        <title>Authenicate</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Stack as="main" w="24rem">
@@ -29,4 +29,4 @@ const authorize = () => {
   );
 };
 
-export default authorize;
+export default authenticate;

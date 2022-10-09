@@ -9,7 +9,7 @@ const Logout = () => {
 
   const handleLogout = () => {
     logout();
-    Router.push("/login");
+    Router.push("/authenticate");
   };
   return (
     <Stack align="center" justify="center" height="100vh">
