@@ -1,7 +1,7 @@
 import Head from "next/head";
 import DynamicText, { RefFunctionType } from "components/DynamicText";
 import { Input, Stack } from "@chakra-ui/react";
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 const Home = () => {
   const textRef = useRef<RefFunctionType>(null);
