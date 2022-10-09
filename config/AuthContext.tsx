@@ -19,7 +19,6 @@ const AuthContext = createContext({} as AuthContextType);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState<UserType | null>(null);
   const [loading, setLoading] = useState(true);
-  console.log(user);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {

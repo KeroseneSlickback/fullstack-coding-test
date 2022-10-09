@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, FormLabel, Heading, Input, Stack, VStack } from "@chakra-ui/react";
 import { useAuth } from "config/AuthContext";
 import Head from "next/head";
+import Router from "next/router";
 import React, { ChangeEvent, useState } from "react";
 
 interface UserType {
@@ -30,6 +31,7 @@ const Signup = () => {
     if (userInfo.password === userInfo.passwordConfirm) {
       try {
         await signup(userInfo.email, userInfo.password);
+        Router.push("/");
       } catch (e) {
         console.log(e);
       }

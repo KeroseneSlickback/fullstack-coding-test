@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, FormLabel, Heading, Input, Stack, VStack } from "@chakra-ui/react";
 import { useAuth } from "config/AuthContext";
 import Head from "next/head";
+import Router from "next/router";
 import React, { ChangeEvent, useState } from "react";
 
 interface UserType {
@@ -22,10 +23,12 @@ const Login = () => {
       [name]: value,
     }));
   };
+
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     try {
       await login(userInfo.email, userInfo.password);
+      Router.push("/");
     } catch (e) {
       console.log(e);
     }
