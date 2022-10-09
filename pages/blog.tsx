@@ -48,7 +48,7 @@ const blog = ({ articles }: Props) => {
       <>
         <Stack align="center" justify="center" height="100vh">
           <Head>
-            <title>Login</title>
+            <title>Blog</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Stack as="main" w="50rem">
@@ -67,6 +67,7 @@ const blog = ({ articles }: Props) => {
                             p="4"
                             flexDirection="column"
                             alignItems="center"
+                            style={{ cursor: "pointer" }}
                             onClick={() => articleSelect(article.id)}>
                             <Heading as="h5" textAlign="center">
                               {article.title}

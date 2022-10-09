@@ -12,7 +12,10 @@ const Navbar = (props: Props) => {
       <Container display="flex" p={4} maxW="container.md" alignItems="center" justifyContent="space-between">
         <Link href="/">Home</Link>
         {auth.user ? (
-          <Link href="/logout">Logout</Link>
+          <>
+            <Link href="/blog">Blogs</Link>
+            <Link href="/logout">Logout</Link>
+          </>
         ) : (
           <>
             <Link href="/login">Login</Link>

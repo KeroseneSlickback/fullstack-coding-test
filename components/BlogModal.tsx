@@ -15,13 +15,14 @@ const BlogModal = (props: Props) => {
       left="0"
       w="100%"
       h="100%"
-      zIndex="1"
       backgroundColor="rgba(0, 0, 0, 0.75)"
       onClick={props.clearSelectedArticle}
+      zIndex="1"
       flexDirection="column"
       alignItems="center"
+      style={{ cursor: "pointer" }}
       justifyContent="center">
-      <Flex h="500px" w="500px" backgroundColor="gray.500" p="4" flexDirection="column" alignItems="center">
+      <Flex h="500px" w="500px" backgroundColor="gray.500" p="4" flexDirection="column" alignItems="center" zIndex="2">
         <Heading as="h5" textAlign="center">
           {props.article.title}
         </Heading>
