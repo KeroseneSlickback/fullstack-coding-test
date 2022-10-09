@@ -1,5 +1,5 @@
 import Head from "next/head";
-import DynamicText, { RefFunctionType } from "../components/DynamicText";
+import DynamicText, { RefFunctionType } from "components/DynamicText";
 import { Input, Stack } from "@chakra-ui/react";
 import { useRef } from "react";
 
