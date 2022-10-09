@@ -1,10 +1,12 @@
 import { Box, Button, FormControl, FormLabel, Heading, Input, Stack, VStack } from "@chakra-ui/react";
+import { useAuth } from "config/AuthContext";
 import Head from "next/head";
 import React from "react";
 
 type Props = {};
 
 const Logout = (props: Props) => {
+  const { logout } = useAuth();
   return (
     <Stack align="center" justify="center" height="100vh">
       <Head>
@@ -15,7 +17,7 @@ const Logout = (props: Props) => {
         <Box border="2px" w="100%" height="100%" p={6}>
           <VStack spacing={4} align="flex-start" w="full">
             <Heading>Logout</Heading>
-            <Button mt={4} type="submit">
+            <Button mt={4} type="submit" onClick={logout}>
               Logout
             </Button>
           </VStack>

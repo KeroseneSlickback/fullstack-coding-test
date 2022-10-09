@@ -1,4 +1,5 @@
 import { Box, Button, FormControl, FormLabel, Heading, Input, Stack, VStack } from "@chakra-ui/react";
+import { useAuth } from "config/AuthContext";
 import Head from "next/head";
 import React, { ChangeEvent, useState } from "react";
 
@@ -8,6 +9,7 @@ interface UserType {
 }
 
 const Login = () => {
+  const { login } = useAuth();
   const [userInfo, setUserInfo] = useState<UserType>({
     email: "",
     password: "",
@@ -20,9 +22,13 @@ const Login = () => {
       [name]: value,
     }));
   };
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log(userInfo);
+    try {
+      await login(userInfo.email, userInfo.password);
+    } catch (e) {
+      console.log(e);
+    }
   };
   return (
     <Stack align="center" justify="center" height="100vh">
