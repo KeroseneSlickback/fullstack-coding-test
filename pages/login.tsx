@@ -65,7 +65,7 @@ const Login = () => {
                 />
               </FormControl>
               <Button mt={4} type="submit">
-                Signup
+                Login
               </Button>
             </form>
           </VStack>
